@@ -1,0 +1,169 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{siunitx}  
+%
+% Title.
+\title{Experiment 1\\
+RC circuit}
+
+% Author
+\author{Anugole Sai Gaurav, 170070008}
+\date
+
+% begin the document.
+\begin{document}
+
+% make a title page.
+\maketitle
+
+\section{Overview of the experiment}
+A resistor–capacitor circuit (RC circuit), or RC filter or RC network, is an electric circuit composed of resistors and capacitors driven by a voltage or current source. A first order RC circuit is composed of one resistor and one capacitor and is the simplest type of RC circuit.
+\\
+\\In this experiment we have analysed the output across capacitor and resistor separately in a r-c series circuit with varying input voltage. The connections have been made on a breadboard and waveforms have been observed on a DSO.
+
+
+\section{voltage across capacitor with zero dc offset}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{schmitttriggerr.eps}
+\caption{Schmitt Trigger}
+\end{figure}
+
+\subsection{Observation}
+$V_{dc-offset}$=0 V,  $V_{in}$ = 10 V (pk-pk), 1 KHz 
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{fig1.png}
+  \caption{Input and Output Waveform}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{fig2.png}
+  \caption{$V_{o}$ vs $V_{i}$ Plot}
+  \end{subfigure}%
+\\
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{fig3.png}
+  \caption{Delta showing the value of $V_{T}$}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{Waveforms for $V_{a}$=0 V}
+\end{figure}
+
+
+
+\subsubsection{Explanation}
+
+1) When the pulse wave of correspongin frequencing is applied, the voltage across capacitor rises exponentially when the voltage=+5V and decays when it is -5V because the capacitor gets charged and discharged accordingly. When the frequency of the input waveform was less, the time constant of the circuit was less enough for the circuit to reach steady-state and hence the voltage across capacitor reaches to a constant value. For higher frequencies, steady-state is not reached.
+
+for $V_{a}=0 V$ and $V_{O}=\pm5.6 V \pm0.7 = \pm 6.3 V$
+\begin{equation}V_{T}=(\frac{10}{10 + 10})6.3 = 3.15 V
+\end{equation}
+
+Experimentally,delta comes out to be 3.92 V which is close to the theoretical value.
+
+
+\begin{equation}
+    A_{v}=\frac{V_{out}}{V_{1}-V_{2}} = \frac{R_{4}}{R_{3}}(1 + \frac{2R_{2}}{R_{1}})
+\end{equation}
+\subsection{Observations for Va = 3 V}
+Va = 3 V, Vin = 12 V (pk-pk), 1 KHz
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{fi1.png}
+  \caption{Input and Output Waveform}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{fi2.png}
+  \caption{$V_{o}$ vs $V_{i}$ Plot}
+  \label{fig:sub1}
+\end{subfigure}%
+\\
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{fi3.png}
+  \caption{Cursor 2 showing the value of $V_{TH}$}
+  \label{fig:sub2}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{fi4.png}
+  \caption{Cursor 2 showing the value of $V_{TL}$}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{Waveforms for $V_{a}$=3 V}
+\end{figure}
+
+
+\subsubsection{Explanation}
+
+\begin{equation}
+     V_{T}=(\frac{R_{1}}{R_{1} + R_{2}})V_{O} + (\frac{R_{2}}{R_{1}+R_{2}})V_{a}
+\end{equation} 
+\\for $V_{a}$= 0 V and $V_{O}$=\pm5.6 V \pm0.7 = \pm 6.3 V
+
+So,we get $V_{TH}$=4.6 V and $V_{TL}$=-1.65 V
+\\The experimental values are very close to the theoretically calculated values.
+\newpage
+\section{Astable Multivibrator}
+
+Output waveform when potentiometer is close to 10 k\si{\ohm}
+
+
+
+\begin{figure}[h]
+  % will center the figure.
+  \centering
+  % include graphics (can include eps, jpg, pdf ...)
+  \includegraphics[scale=0.6]{astaable2.eps}  % change scale factor to re-size the image.
+  % give a caption.
+  \caption{Astable Multivibrator}
+\end{figure}
+
+\subsection{Observations}
+\begin{figure}[h]
+  % will center the figure.
+  \centering
+  % include graphics (can include eps, jpg, pdf ...)
+  \includegraphics[scale=0.4]{wavef.png}  % change scale factor to re-size the image.
+  % give a caption.
+  \caption{Output waveform when resistance of the potentiometer is close to 10 k\si{\ohm}}
+\end{figure}
+
+\newpage
+%
+% Tables.
+%
+\begin{table}[h]
+\centering  % table will be centered.
+\begin{tabular}{|c | c| c|} % 3 columns, with text centered in each column, 
+			 %  the | specifies that there will be a line separating the
+			 %  adjacent columns.
+\hline  % horizontal line spanning the columns.
+Potentiometer Value(k\si{\ohm}) & Theoretical Value(Hz) & Experimental Frequency(Hz) \\  % table entry 1, separated by &, ended by \\
+\hline  % horizontal line spanning the columns.
+10    & 413 & 563.1 \\  % table entry 2, separated by &, ended by \\
+0    & 4.55 k & 5.14 k \\  % ...
+\hline	% horizontal line.
+\end{tabular}
+\caption{Observation table for Astable Multivibrator}
+\end{table}
+\\
+\subsection{Explanation}
+When potentiometer value is close to 0 \si{\ohm}, the frequency is very high, thus, the pulse width
+reduces and the capacitor doesn't get time to charge. Hence we see a distortion in the
+waveform.
+\end{document}

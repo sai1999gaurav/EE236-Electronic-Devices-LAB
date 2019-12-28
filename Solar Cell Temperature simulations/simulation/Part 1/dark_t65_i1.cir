@@ -1,0 +1,18 @@
+dark_t65_i1
+.include Solar_Cell.txt
+
+xsc 3 0 solar_cell
+v 1 0 
+r 1 2 100
+v1 2 3 0
+.temp 65
+.dc v 0.01 2 0.01
+.control
+run
+plot i(v1) vs v(3)
+plot ln(i(v1)) vs v(3)
+wrdata d ln(i(v1)) vs v(3)
+hardcopy dark_t65_i1.eps i(v1) vs v(3)
+hardcopy dark_t65_i1_if.eps ln(i(v1)) vs v(3)
+.endc
+.end

@@ -1,0 +1,17 @@
+light_t35
+.include Solar_Cell.txt
+
+xsc 2 0 solar_cell
+r 1 0 
+v1 2 1 0
+.temp 35
+.dc r 1 500 0.01
+.control
+run
+wrdata i35 i(v1) vs v(2)
+wrdata p35 i(v1)*v(2) vs v(2)
+plot i(v1) vs v(2), i(v1)*v(2) vs v(2)
+
+hardcopy light_t35.eps i(v1) vs v(2), i(v1)*v(2) vs v(2)
+.endc
+.end

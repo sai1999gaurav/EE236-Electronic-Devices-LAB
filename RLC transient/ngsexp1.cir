@@ -1,0 +1,12 @@
+rc circuit with no dc offest
+
+r 1 2 1k
+c 2 0 1u
+v 1 0 pulse(-5 5 0 0 0 5ms 10ms)
+.tran 0.02ms 20ms
+.control
+run
+plot v(1) v(2)
+.endc
+.end
+

@@ -1,0 +1,23 @@
+sc_simul
+.include ua741.txt
+x1 1 2 3 4 5 UA741
+d1 8 0 diode
+.model diode d (is=(1e-13) n=1)
+d2 8 0 diode2
+.model diode2 d (is=(2e-6) n=2)
+v 1 0 
+i 0 8 dc 8e-3
+v1 2 5 dc 0v
+v2 3 0 dc 12v
+v3 4 0 dc -12v
+r 5 6 0.1k
+rs 7 8 10
+rsh 8 0 1e3
+v4 6 7 dc 0v
+.dc v -2 2 0.01
+.control
+run
+plot i(v4) vs v(7)
+plot log(i(v4)+15e-3)  vs v(7)
+.endc
+.end

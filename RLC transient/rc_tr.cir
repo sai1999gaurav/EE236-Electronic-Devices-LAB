@@ -1,0 +1,17 @@
+rlc circuit transient analysis
+
+*describe circuit
+* <element-name> <nodes> <value/model>
+r 1 2 1k
+c 2 3 1000u
+l 3 0 1h
+v 1 0 
+
+*analysis command
+.dc v 0 1 0.01
+.control
+run
+*display command
+plot v(1) v(2) v(3)
+.endc
+.end

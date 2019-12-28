@@ -1,0 +1,19 @@
+sc_simul 
+.include ua741.txt
+.include Solar_Cell.txt
+
+x1 1 5 3 4 5 UA741
+xsc 6 7 solar_cell
+v 1 0 
+v2 3 0  12
+v3 4 0 -12
+r 5 6 100
+v4 7 0 0
+
+.dc v -2 2 0.01
+.control
+run
+plot i(v4) vs v(6)
+plot ln(i(v4) + 15e-3) vs v(6)
+.endc
+.end

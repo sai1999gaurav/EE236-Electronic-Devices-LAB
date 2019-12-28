@@ -1,0 +1,4 @@
+Voc decreases with temperature as it depends linearly on temperature and log(light intensity/reverse saturation current). Since reverse stauration current varies proportional to the square of intrinsic carrier concentration that increases exponentially with temperature, net effect results in decrease of voltage across the cell.
+FF decrease with temperature.
+Isc increase with temperature as it results in reduction of semiconductor bandgap. Thus, more photons are absorbed and hence, more current.
+

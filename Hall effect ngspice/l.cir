@@ -1,0 +1,18 @@
+comparator using lm311
+.include lm311.txt
+x1 1 2 3 4 5 6 LM311
+v1 1 0 sin(5 5 1k 0 0)
+v2 2 0 dc 2v
+vdd 3 0 dc 12v
+vss 4 0 dc 0v
+vo 6 0 dc 0v
+r 5 7 18k
+vd 7 0 dc 12v
+.tran 0.02ms 10ms
+.control
+run
+hardcopy p1.ps v(5) v(1)
+plot v(5) v(1)
+.endc
+.end
+ 

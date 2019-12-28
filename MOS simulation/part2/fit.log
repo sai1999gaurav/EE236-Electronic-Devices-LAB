@@ -1,0 +1,46 @@
+
+
+*******************************************************************************
+Mon Oct 15 20:54:11 2018
+
+
+FIT:    data read from "vtvsvsb"
+        format = z
+        x range restricted to [0.00000 : 4.00000]
+BREAK: No data to fit
+
+*******************************************************************************
+Mon Oct 15 20:54:28 2018
+
+
+FIT:    data read from "vtvsvsb"
+        format = z
+        x range restricted to [-4.00000 : 0.00000]
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)= m*x+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m             b            
+   0 7.2630000000e+00   0.00e+00  1.87e+00    1.000000e+00   1.000000e+00
+   4 5.3100000000e-03  -1.34e-03  1.87e-04    1.490000e-01  -6.460000e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.00531
+rel. change during last iteration : -1.34321e-08
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0420714
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00177
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m               = 0.149            +/- 0.0133       (8.929%)
+b               = -0.646           +/- 0.03259      (5.045%)
+
+correlation matrix of the fit parameters:
+                m      b      
+m               1.000 
+b               0.816  1.000 

@@ -1,0 +1,14 @@
+*Model file for the MOSFET
+.include tsmc_spice_180nm.txt
+*Usually, the order of terminals are
+*drain, gate, source and body respectively
+m1 d g gnd gnd CMOSN
+vgs g gnd dc 1.5V
+vds dummy gnd dc 5V
+vdummy dummy d dc 0V
+.control
+dc vds 0 5 0.02 vgs 1.5 2.5 0.5
+plot i(vdummy)
+wrdata p i(vdummy)
+.endc
+.end

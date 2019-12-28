@@ -1,0 +1,16 @@
+light_t65
+.include Solar_Cell.txt
+
+xsc 2 0 solar_cell
+r 1 0 
+v1 2 1 0
+.temp 65
+.dc r 1 500 0.01
+.control
+run
+plot i(v1) vs v(2), i(v1)*v(2) vs v(2)
+wrdata i65 i(v1) vs v(2)
+wrdata p65 i(v1)*v(2) vs v(2)
+hardcopy light_t65.eps i(v1) vs v(2), i(v1)*v(2) vs v(2)
+.endc
+.end
